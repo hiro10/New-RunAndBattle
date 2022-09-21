@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public partial class PlayerController : MonoBehaviour
 {
-    
     public class Status
     {
         // HP
@@ -101,17 +100,21 @@ public partial class PlayerController : MonoBehaviour
         playerAttacke_Sword = GetComponent<PlayerAttacke_Sword>();
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// 更新処理
+    /// </summary>
     void Update()
     {
 
         switch (CurrentState)
         {
+            // 動いているとき
             case State.Moving:
                 {
                     Move();
                     break;
                 }
+            // 攻撃時
             case State.Battle:
                 {
                     Battle();
@@ -119,10 +122,8 @@ public partial class PlayerController : MonoBehaviour
                 }
         }
 
-        // Hpゲージに反映
+        // Hpゲージに反映（更新処理で）
         slider.value = (float)CurrentStatus.Hp / (float)DefaultStatus.Hp;
-
-       
 
     }
 
@@ -178,6 +179,9 @@ public partial class PlayerController : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 戦闘時の処理
+    /// </summary>
     private void Battle()
     {
 
@@ -238,6 +242,7 @@ public partial class PlayerController : MonoBehaviour
     /// </summary>
     private void InitPlayer()
     {
+        // 今のステータスをデフォルトステータスへ
         CurrentStatus.Hp = DefaultStatus.Hp;
         CurrentStatus.Power = DefaultStatus.Power;
     }
