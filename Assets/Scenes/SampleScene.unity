@@ -12199,6 +12199,7 @@ GameObject:
   - component: {fileID: 1730201753}
   - component: {fileID: 1730201752}
   - component: {fileID: 1730201756}
+  - component: {fileID: 5536533345155896161}
   m_Layer: 0
   m_Name: BasicMale01
   m_TagString: Player
@@ -12206,6 +12207,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5536533345155896161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5536533345155896160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0.7117429, b: 1, a: 0.7176471}
+  outlineWidth: 4.5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &5536533345155896162
 Transform:
   m_ObjectHideFlags: 0
